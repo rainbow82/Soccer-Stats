@@ -1,0 +1,7 @@
+C:\Users\bbeac_000\Documents\GitHub\Soccer-Stats\SoccerStats\SoccerStats\bin\Debug\SoccerStats.exe.config
+C:\Users\bbeac_000\Documents\GitHub\Soccer-Stats\SoccerStats\SoccerStats\bin\Debug\data.txt
+C:\Users\bbeac_000\Documents\GitHub\Soccer-Stats\SoccerStats\SoccerStats\bin\Debug\SoccerStats.exe
+C:\Users\bbeac_000\Documents\GitHub\Soccer-Stats\SoccerStats\SoccerStats\bin\Debug\SoccerStats.pdb
+C:\Users\bbeac_000\Documents\GitHub\Soccer-Stats\SoccerStats\SoccerStats\obj\Debug\SoccerStats.csprojResolveAssemblyReference.cache
+C:\Users\bbeac_000\Documents\GitHub\Soccer-Stats\SoccerStats\SoccerStats\obj\Debug\SoccerStats.exe
+C:\Users\bbeac_000\Documents\GitHub\Soccer-Stats\SoccerStats\SoccerStats\obj\Debug\SoccerStats.pdb
