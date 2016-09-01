@@ -5,3 +5,4 @@ C:\Users\bbeac_000\Documents\GitHub\Soccer-Stats\SoccerStats\SoccerStats\bin\Deb
 C:\Users\bbeac_000\Documents\GitHub\Soccer-Stats\SoccerStats\SoccerStats\obj\Debug\SoccerStats.csprojResolveAssemblyReference.cache
 C:\Users\bbeac_000\Documents\GitHub\Soccer-Stats\SoccerStats\SoccerStats\obj\Debug\SoccerStats.exe
 C:\Users\bbeac_000\Documents\GitHub\Soccer-Stats\SoccerStats\SoccerStats\obj\Debug\SoccerStats.pdb
+C:\Users\bbeac_000\Documents\GitHub\Soccer-Stats\SoccerStats\SoccerStats\bin\Debug\SoccerGameResults.csv
