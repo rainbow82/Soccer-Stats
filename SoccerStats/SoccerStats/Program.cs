@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.IO;
 using Newtonsoft.Json;
-
+using System.Net;
 
 namespace SoccerStats
 {
@@ -13,21 +13,22 @@ namespace SoccerStats
     {
         static void Main(string[] args)
         {
-            string currentDirectory = Directory.GetCurrentDirectory();
-            DirectoryInfo directory = new DirectoryInfo(currentDirectory);
+            //string currentDirectory = Directory.GetCurrentDirectory();
+            //DirectoryInfo directory = new DirectoryInfo(currentDirectory);
 
-            var fileName = Path.Combine(directory.FullName, "SoccerGameResults.csv");
-            var fileContents = ReadSoccerResults(fileName);
-            fileName = Path.Combine(directory.FullName, "players.json");
-            var players = DeserializePlayers(fileName);
-            var topTenPlayers = GetTopTenPlayers(players);
-            foreach (var player in topTenPlayers)
-            {
-                Console.WriteLine("Name: " + player.FirstName + "PPG: " + player.PointsPerGame);
-            }
+           //// var fileName = Path.Combine(directory.FullName, "SoccerGameResults.csv");
+            //var fileContents = ReadSoccerResults(fileName);
+            //fileName = Path.Combine(directory.FullName, "players.json");
+            //var players = DeserializePlayers(fileName);
+            //var topTenPlayers = GetTopTenPlayers(players);
+            //foreach (var player in topTenPlayers)
+            //{
+               // Console.WriteLine("Name: " + player.FirstName + "PPG: " + player.PointsPerGame);
+            //}
 
-            fileName = Path.Combine(directory.FullName, "topTen.json");
-            SerializePlayersToFile(topTenPlayers, fileName);
+            //fileName = Path.Combine(directory.FullName, "topTen.json");
+            //SerializePlayersToFile(topTenPlayers, fileName);
+            Console.WriteLine(GetGoogleHomePage());
         }// end main
 
         public static string ReadFile(string fileName)
@@ -120,15 +121,18 @@ namespace SoccerStats
             return topTenPlayers;
         }
 
-        public static void SerializePlayersToFile(List<Player> players, string fileName)
-        {
-            var serializer = new JsonSerializer();
-            using (var writer = new StreamWriter(fileName))
-            using (var jsonWriter = new JsonTextWriter(writer))
+        public static string GetGoogleHomePage()
+        { 
+            var webClient = new WebClient();
+            byte[] googleHome = webClient.DownloadData("https://www.google.com");
+
+            using (var stream = new MemoryStream(googleHome))
+            using (var reader = new StreamReader(stream))
             {
-                 serializer.Serialize(jsonWriter, players);
+                return reader.ReadToEnd();
             }
         }
+
 
     }//end program
 }// end namespace
