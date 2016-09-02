@@ -6,3 +6,6 @@ C:\Users\bbeac_000\Documents\GitHub\Soccer-Stats\SoccerStats\SoccerStats\obj\Deb
 C:\Users\bbeac_000\Documents\GitHub\Soccer-Stats\SoccerStats\SoccerStats\obj\Debug\SoccerStats.exe
 C:\Users\bbeac_000\Documents\GitHub\Soccer-Stats\SoccerStats\SoccerStats\obj\Debug\SoccerStats.pdb
 C:\Users\bbeac_000\Documents\GitHub\Soccer-Stats\SoccerStats\SoccerStats\bin\Debug\SoccerGameResults.csv
+C:\Users\bbeac_000\Documents\GitHub\Soccer-Stats\SoccerStats\SoccerStats\bin\Debug\players.json
+C:\Users\bbeac_000\Documents\GitHub\Soccer-Stats\SoccerStats\SoccerStats\bin\Debug\Newtonsoft.Json.dll
+C:\Users\bbeac_000\Documents\GitHub\Soccer-Stats\SoccerStats\SoccerStats\bin\Debug\Newtonsoft.Json.xml

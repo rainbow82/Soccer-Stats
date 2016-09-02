@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.IO;
+using Newtonsoft.Json;
 
 
 namespace SoccerStats
@@ -17,6 +18,13 @@ namespace SoccerStats
 
             var fileName = Path.Combine(directory.FullName, "SoccerGameResults.csv");
             var fileContents = ReadSoccerResults(fileName);
+            fileName = Path.Combine(directory.FullName, "players.json");
+            var players = DeserializePlayers(fileName);
+            var topTenPlayers = GetTopTenPlayers(players);
+            foreach (var player in topTenPlayers)
+            {
+                Console.WriteLine("Name: " + player.FirstName + "PPG: " + player.PointsPerGame);
+            }
         }// end main
 
         public static string ReadFile(string fileName)
@@ -79,6 +87,34 @@ namespace SoccerStats
             return soccerResults;
         }
 
+        public static List<Player> DeserializePlayers(string fileName)
+        {
+            var players = new List<Player>();
+            var serializer = new JsonSerializer();
+            using(var reader = new StreamReader(fileName))
+            using (var jsonReader = new JsonTextReader(reader))
+            {
+                players = serializer.Deserialize<List<Player>>(jsonReader);
+            }
+                
+            return players;
+        }
 
+        public static List<Player> GetTopTenPlayers(List<Player> players)
+        {
+            var topTenPlayers = new List<Player>();
+            players.Sort(new PlayerComparer());
+            int counter = 0;
+            foreach (var player in players)
+            {
+                topTenPlayers.Add(player);
+                counter++;
+                if (counter == 10)
+                {
+                    break;
+                }
+            }
+            return topTenPlayers;
+        }
     }//end program
 }// end namespace
