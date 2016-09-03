@@ -27,6 +27,9 @@ namespace SoccerStats
         [JsonProperty(PropertyName = "position")]
         public string Position { get; set; }
 
+        [JsonProperty(PropertyName = "second_name")]
+        public string LastName { get; set; }
+
         [JsonProperty(PropertyName = "team_name")]
         public string TeamName { get; set; }
         
